@@ -17,6 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <isPTSEnabled>false</isPTSEnabled>
   </properties>
 
   <dependencies>
@@ -55,6 +56,13 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
+          <configuration>
+            <properties>
+              <predictiveSelection>
+                <enabled>${isPTSEnabled}</enabled>
+              </predictiveSelection>
+            </properties>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

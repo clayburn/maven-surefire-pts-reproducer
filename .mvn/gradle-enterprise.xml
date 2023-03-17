@@ -20,10 +20,10 @@
   </buildScan>
   <buildCache>
     <local>
-      <enabled>true</enabled>
+      <enabled>false</enabled>
     </local>
     <remote>
-      <storeEnabled>#{isTrue(env['GITHUB_ACTIONS'])}</storeEnabled>
+      <enabled>false</enabled>
     </remote>
   </buildCache>
 </gradleEnterprise>
